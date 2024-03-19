@@ -20,8 +20,8 @@ variable "serviceaccount_name" {
   type        = string
 }
 
-variable "cluster_name"{
-   description = "A service account provides an identity for processes that run in a Pod, and maps to a ServiceAccount object."
-  default     = {module.eks.cluster_name}
-  type        =string
+variable "cluster_name" {
+  description = "A service account provides an identity for processes that run in a Pod, and maps to a ServiceAccount object."
+  default     = module.eks.cluster_name
+  type        = string
 }
