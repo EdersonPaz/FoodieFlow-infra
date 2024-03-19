@@ -35,20 +35,6 @@ module "eks" {
   tags = {
     Environment = "staging"
   }
-
-  additional_security_group_rules = [
-    {
-      description       = "Allow incoming traffic on port 8080"
-      from_port         = 8080
-      to_port           = 8080
-      protocol          = "tcp"
-      cidr_blocks       = ["0.0.0.0/0"]
-      ipv6_cidr_blocks  = []
-      prefix_list_ids   = []
-      security_group_id = null
-      self              = false
-    }
-  ]
 }
 
 module "eks_blueprints_addons" {
