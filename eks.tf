@@ -2,7 +2,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 20.0"
 
-  cluster_name    = "cluster-eks-foodieflow"
+  cluster_name    = "cluster-eks-foodieflow-app-teste-final"
   cluster_version = "1.23"
 
   cluster_endpoint_private_access = true
