@@ -31,7 +31,7 @@ module "eks" {
   }
 
   tags = {
-    Environment = "staging"
+    Environment = "prd"
   }
 }
 
