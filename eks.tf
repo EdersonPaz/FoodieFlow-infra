@@ -3,7 +3,7 @@ module "eks" {
   version = "~> 20.0"
 
   cluster_name    = "eks-foodieflows"
-  cluster_version = "1.23"
+  cluster_version = "1.29"
 
   cluster_endpoint_private_access = true
   cluster_endpoint_public_access  = true
