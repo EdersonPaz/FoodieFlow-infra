@@ -88,13 +88,3 @@ resource "helm_release" "secrets-provider-aws" {
   ]
 }
 
-resource "kubernetes_namespace_v1" "foodieflow_namespace" {
-  metadata {
-    name = "foodieflow_namespace"
-  }
-
-  depends_on = [
-    module.eks
-  ]
-}
-
