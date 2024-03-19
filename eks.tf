@@ -2,7 +2,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 20.0"
 
-  cluster_name    = "cluster-eks-foodieflow-app-teste-final"
+  cluster_name    = "eks-foodieflows"
   cluster_version = "1.23"
 
   cluster_endpoint_private_access = true
@@ -10,8 +10,6 @@ module "eks" {
 
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
-
-  enable_irsa = true
 
   eks_managed_node_group_defaults = {
     disk_size = 50
